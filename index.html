@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Disappearing Text</title>
-  </head>
-  <body>
-    <p id="myText">Hello, World!</p>
-    <script>
-      let duration = 5000; // Change this value to adjust the duration of the timer (in milliseconds)
-      setTimeout(function() {
-        document.getElementById("myText").style.display = "none";
-      }, duration);
-    </script>
-  </body>
+<head>
+	<title>Disappearing Text App</title>
+</head>
+<body>
+	<textarea id="text" rows="10" cols="50"></textarea>
+	<button onclick="submitText()">Submit</button>
+
+	<script>
+		function submitText() {
+			var text = document.getElementById("text").value;
+			document.getElementById("text").value = "";
+
+			// Set a timer for 5 seconds to clear the text
+			setTimeout(function() {
+				document.getElementById("text").value = "";
+			}, 5000);
+		}
+	</script>
+</body>
 </html>
