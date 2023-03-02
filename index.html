@@ -1,26 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Disappearing Text</title>
+    <title>Blank Page with Blinking Cursor</title>
     <style>
-      #myText {
-        border-right: 2px solid black; /* This creates the blinking cursor */
-        animation: blink 0.5s infinite; /* This animates the blinking cursor */
+      #cursor {
+        display: inline-block;
+        width: 0.5rem;
+        height: 1rem;
+        border-bottom: 2px solid black;
+        animation: blink 0.5s infinite;
       }
       @keyframes blink {
         50% {
-          border-color: transparent; /* This alternates the border color between black and transparent */
+          border-color: transparent;
         }
       }
     </style>
   </head>
   <body>
-    <p id="myText">Hello, World!</p>
-    <script>
-      let duration = 5000; // Change this value to adjust the duration of the timer (in milliseconds)
-      setTimeout(function() {
-        document.getElementById("myText").style.display = "none";
-      }, duration);
-    </script>
+    <div id="text"></div>
+    <span id="cursor"></span>
   </body>
 </html>
