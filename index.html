@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blank Page with Blinking Cursor</title>
-    <style>
-      #cursor {
-        display: inline-block;
-        width: 0.5rem;
-        height: 1rem;
-        border-bottom: 2px solid black;
-        animation: blink 0.5s infinite;
-      }
-      @keyframes blink {
-        50% {
-          border-color: transparent;
-        }
-      }
-      #input {
-        font-size: 1.5rem;
-        border: none;
-        outline: none;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="text"></div>
-    <span id="cursor"></span>
-    <input type="text" id="input" autofocus>
-    <script>
-      var inputField = document.getElementById("input");
-      var textField = document.getElementById("text");
-      var cursor = document.getElementById("cursor");
+<head>
+	<title>Disappearing Text App</title>
+	<style>
+		#input {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="input">
+	<button onclick="submitText()">Submit</button>
 
-      inputField.addEventListener("input", function() {
-        textField.innerText = inputField.value;
-      });
+	<p id="output"></p>
 
-      setInterval(function() {
-        cursor.style.display = cursor.style.display === "none" ? "inline-block" : "none";
-      }, 500);
-    </script>
-  </body>
+	<script>
+		function submitText() {
+			var text = document.getElementById("input").value;
+			document.getElementById("input").value = "";
+
+			// Set a timer for 5 seconds to clear the text
+			setTimeout(function() {
+				document.getElementById("output").textContent = "";
+			}, 5000);
+
+			// Display the text in the output area
+			document.getElementById("output").textContent = text;
+		}
+	</script>
+</body>
 </html>
