@@ -1,36 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Disappearing Text App</title>
-	<style>
-		#input {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			color: red;
-		}
-	</style>
-</head>
-<body>
-	<input type="text" id="input">
-	<button onclick="submitText()">Submit</button>
-
-	<script>
-		function submitText() {
-			var text = document.getElementById("input").value;
-			document.getElementById("input").value = "";
-
-			// Set a timer for 5 seconds to clear the text
-			setTimeout(function() {
-				document.getElementById("output").textContent = "";
-			}, 5000);
-
-			// Display the text in the output area
-			document.getElementById("output").textContent = text;
-		}
-	</script>
-
-	<p id="output"></p>
-</body>
+  <head>
+    <title>Disappearing Text</title>
+    <style>
+      #myText {
+        border-right: 2px solid black; /* This creates the blinking cursor */
+        animation: blink 0.5s infinite; /* This animates the blinking cursor */
+      }
+      @keyframes blink {
+        50% {
+          border-color: transparent; /* This alternates the border color between black and transparent */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p id="myText">Hello, World!</p>
+    <script>
+      let duration = 5000; // Change this value to adjust the duration of the timer (in milliseconds)
+      setTimeout(function() {
+        document.getElementById("myText").style.display = "none";
+      }, duration);
+    </script>
+  </body>
 </html>
