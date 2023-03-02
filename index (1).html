@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disappearing Text</title>
+  </head>
+  <body>
+    <label for="myInput">Enter the text you want to disappear:</label>
+    <input type="text" id="myInput">
+    <br><br>
+    <button onclick="startTimer()">Start Timer</button>
+    <br><br>
+    <p id="myText"></p>
+    <script>
+      function startTimer() {
+        let text = document.getElementById("myInput").value;
+        let duration = 5000; // Change this value to adjust the duration of the timer (in milliseconds)
+        document.getElementById("myText").innerHTML = text;
+        setTimeout(function() {
+          document.getElementById("myText").innerHTML = "";
+        }, duration);
+      }
+    </script>
+  </body>
+</html>
