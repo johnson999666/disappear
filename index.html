@@ -4,19 +4,25 @@
 	<title>Disappearing Text App</title>
 </head>
 <body>
-	<textarea id="text" rows="10" cols="50"></textarea>
+	<label for="input">Enter your text:</label>
+	<input type="text" id="input">
 	<button onclick="submitText()">Submit</button>
 
 	<script>
 		function submitText() {
-			var text = document.getElementById("text").value;
-			document.getElementById("text").value = "";
+			var text = document.getElementById("input").value;
+			document.getElementById("input").value = "";
 
 			// Set a timer for 5 seconds to clear the text
 			setTimeout(function() {
-				document.getElementById("text").value = "";
+				document.getElementById("output").textContent = "";
 			}, 5000);
+
+			// Display the text in the output area
+			document.getElementById("output").textContent = text;
 		}
 	</script>
+
+	<p id="output"></p>
 </body>
 </html>
