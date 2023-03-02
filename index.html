@@ -2,9 +2,17 @@
 <html>
 <head>
 	<title>Disappearing Text App</title>
+	<style>
+		#input {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: red;
+		}
+	</style>
 </head>
 <body>
-	<label for="input">Enter your text:</label>
 	<input type="text" id="input">
 	<button onclick="submitText()">Submit</button>
 
