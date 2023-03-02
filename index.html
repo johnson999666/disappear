@@ -15,10 +15,30 @@
           border-color: transparent;
         }
       }
+      #input {
+        font-size: 1.5rem;
+        border: none;
+        outline: none;
+        width: 100%;
+      }
     </style>
   </head>
   <body>
     <div id="text"></div>
     <span id="cursor"></span>
+    <input type="text" id="input" autofocus>
+    <script>
+      var inputField = document.getElementById("input");
+      var textField = document.getElementById("text");
+      var cursor = document.getElementById("cursor");
+
+      inputField.addEventListener("input", function() {
+        textField.innerText = inputField.value;
+      });
+
+      setInterval(function() {
+        cursor.style.display = cursor.style.display === "none" ? "inline-block" : "none";
+      }, 500);
+    </script>
   </body>
 </html>
