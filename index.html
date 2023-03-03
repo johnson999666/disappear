@@ -1,38 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Blank Page</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <div id="editable" contenteditable="true" style="padding: 5px; width: 80%; margin: auto;">
-     
-    </div>
-    <script>
-      function clearPage() {
-        setInterval(function() {
-          var editable = document.getElementById("editable");
-          if (editable) {
-            editable.innerHTML = "";
-          }
-        }, 5000);
-      }
-      clearPage(); // Call the function to start the interval immediately
+<head>
+	<title>Enlarging Images on Click</title>
+	<style>
+		/* CSS styles to make the images float left and add some margin */
+		img {
+			float: left;
+			margin-right: 10px;
+			margin-bottom: 10px;
+		}
 
-      // Create a blinking cursor
-      setInterval(function() {
-        var el = document.querySelector('div[contenteditable=true]');
-        if (el) {
-          el.focus();
-          var range = document.createRange();
-          range.selectNodeContents(el);
-          range.collapse(false);
-          var sel = window.getSelection();
-          sel.removeAllRanges();
-          sel.addRange(range);
-        }
-      }, 500);
-    </script>
-  </body>
+		/* CSS styles to make the images enlarge when clicked */
+		img.enlarge {
+			transform: scale(1.5);
+			z-index: 1;
+			position: relative;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<!-- 12 image tags that enlarge when clicked -->
+	<img src="image1.jpg" onclick="enlargeImage(this)" />
+	<img src="image2.jpg" onclick="enlargeImage(this)" />
+	<img src="image3.jpg" onclick="enlargeImage(this)" />
+	<img src="image4.jpg" onclick="enlargeImage(this)" />
+	<img src="image5.jpg" onclick="enlargeImage(this)" />
+	<img src="image6.jpg" onclick="enlargeImage(this)" />
+	<img src="image7.jpg" onclick="enlargeImage(this)" />
+	<img src="image8.jpg" onclick="enlargeImage(this)" />
+	<img src="image9.jpg" onclick="enlargeImage(this)" />
+	<img src="image10.jpg" onclick="enlargeImage(this)" />
+	<img src="image11.jpg" onclick="enlargeImage(this)" />
+	<img src="image12.jpg" onclick="enlargeImage(this)" />
+
+	<script>
+		// JavaScript function to enlarge an image when clicked
+		function enlargeImage(img) {
+			img.classList.add("enlarge"); // add enlarge class to the clicked image
+
+			// remove the enlarge class from the clicked image after a short delay
+			setTimeout(function() {
+				img.classList.remove("enlarge");
+			}, 1000);
+		}
+	</script>
+</body>
 </html>
