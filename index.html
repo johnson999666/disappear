@@ -6,9 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div contenteditable="true" onload="clearPage()" style="padding: 5px; width: 80%; margin: auto;">
-      <p>"    "</p>
+ <div id="editable" contenteditable="true" style="padding: 5px; width: 80%; margin: auto;">
+      <p>"    "</p> it needs to clear that div every 5 seconds
     </div>
+    <script>
+      function clearPage() {
+        setInterval(function() {
+          var editable = document.getElementById("editable");
+          if (editable) {
+            editable.innerHTML = "";
+          }
+        }, 5000);
+      }
+      clearPage(); // Call the function to start the interval immediately
+    </script>
     
     <script>
       // Create a blinking cursor
