@@ -1,0 +1,684 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+  
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+
+
+}
+
+
+/* Each item takes up the full width of the container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .flex-item {
+    flex: 1 0 100%; /* Each item takes up the full width of the container */
+    height: 400px; /* Set the height of each item */
+    background-color: white;
+    
+  }
+  
+  @media (min-width: 768px) {
+    .flex-item {
+      flex-basis: calc(50% - 20px); /* Each item takes up 50% of the container's width with some margin */
+      
+    }
+  
+    .flex-item:last-child {
+      margin-right: 0; /* Remove the margin from the last item to prevent overflow */
+    }
+  }
+  /* Each item takes up the full width of the container */
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    padding-top: 200px;
+    padding-bottom: 150px;
+    padding-right: 75px;
+    padding-left: 25px;
+    color: white;
+    background-color: white;
+    
+    
+    
+}
+h1 {
+    font-size: 3em;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 8em;
+      line-height: 1.1;
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    p {
+      font-size: 3em;
+      line-height: 1.1;
+    }
+  }
+  
+ /* Each item takes up the full width of the container */
+
+  .parent1 {
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+
+
+}
+#ch1 {
+    font-size: 8vw;
+    text-align: center;
+    color: aqua;
+    
+}
+
+ /* Each item takes up the full width of the container */
+
+#special {
+    background-image: url('gold.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Each item takes up the full width of the container */
+
+
+
+
+.textbox {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: #F9F9F9;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+    
+  }
+
+
+/* Each item takes up the full width of the container */
+
+ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+  }
+li {
+    padding: 20px;
+}
+
+ /* Each item takes up the full width of the container */
+ 
+.computer {
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+ /* Each item takes up the full width of the container */
+
+#rounded {
+    border-radius: 10px;
+    
+    
+}
+
+ /* the div text */
+
+ .a {
+    padding: 40px;
+    
+    line-height: 2;
+
+ }
+
+
+ .b {
+    font-size: 20px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .b {
+      font-size: 26px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .b {
+      font-size: 32px;
+    }
+  }
+  
+ .a {
+    font-size: 16px;
+  }
+  
+  @media only screen and (min-width: 768px) {
+    .a {
+      font-size: 20px;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    .a {
+      font-size: 24px;
+    }
+  }
+  
+
+  /* the other list thats bigger */
+
+.c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+.d {
+    text-align: center;
+}
+
+ /* the header */
+
+
+
+ .sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: aqua;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+  }
+  
+  .home-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: aqua;
+    color: purple;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+ /* the footer */
+
+
+      
+
+.e {
+    align-items: center;
+    justify-content: center;
+}
+
+.f {
+   
+    margin: 60px;
+    font-size: 50px;
+}
+
+
+/* faded background */
+
+.y {
+    background: linear-gradient(to bottom, white 0%, blue 100%);
+}
+.x {
+    background: linear-gradient(to bottom, blue 0%, white 100%);
+}
+/* center div */
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    height: 700px;
+    
+}
+.w {
+    text-align: left;
+    
+    
+  line-height: 25px; /* twice the font size */
+}
+.w {
+    font-size: 55px;
+}
+/* Default padding */
+.center {
+    padding: 20px;
+    background-color: white;
+}
+  
+  /* Medium-sized screens */
+  @media screen and (min-width: 768px) {
+    .center {
+      padding: 60px;
+    }
+  }
+  
+  /* Large screens */
+  @media screen and (min-width: 1024px) {
+    .center {
+      padding: 150px;
+    }
+  }
+  /* Default font size */
+.f {
+    font-size: 12px;
+  }
+  
+  /* Medium-sized screens */
+  @media screen and (min-width: 768px) {
+    .f {
+      font-size: 16px;
+    }
+  }
+  
+  /* Large screens */
+  @media screen and (min-width: 1024px) {
+    .f {
+      font-size: 20px;
+    }
+  }
+  
+  
+
+
+/* change color div */
+
+
+/* change color div */
+
+.j {
+    opacity: 0.5;
+}
+
+/* change color div */
+
+
+.e {
+    padding: 20px;
+}
+  
+  /* Medium-sized screens */
+  @media screen and (min-width: 768px) {
+    .e {
+      padding: 60px;
+    }
+  }
+  
+  /* Large screens */
+  @media screen and (min-width: 1024px) {
+    .e {
+      padding: 150px;
+    }
+  }
+
+ /* color change */
+
+ #myDIV {
+    height: 800px;
+    background-color: white;
+    
+
+ }
+ p {
+    color: white;
+ }
+
+
+
+
+.content {
+    padding: 50px;
+    color: white;
+}
+.z {
+    background-color: white;
+}
+
+#stretch {
+    height: 300px;
+    background-color: white;
+}
+
+#i {
+    height: 500px;
+}
+.myDiv {
+    background-color: white;
+}
+.h {
+    background-color: aqua;
+}
+.z  {
+    background-color: white;
+}
+
+/* color change */
+
+  /* slides */
+ 
+/* Slideshow container */
+
+
+
+/* Hide the images by default */
+
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Slideshow container */
+  
+  
+  
+  
+  /* Next & previous buttons */
+ 
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+
+  
+  /* The dots/bullets/indicators */
+ 
+    
+
+  /* The dots/bullets/indicators */
+ 
+  
+  
+  
+  
+   /* You can adjust this value to increase or decrease the distance between images */
+  
+
+  
+ 
+  
+  
+   
+  
+  /* adjust this value to control the horizontal spacing */
+  
+  
+
+/* You can adjust this value to set the desired height of the images */
+
+.swiper-container {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .swiper-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 300px;
+    width: 30%;
+    margin-right: 20px;
+  }
+  
+  .swiper-slide:last-of-type {
+    margin-right: 0;
+  }
+  
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .swiper-slide:hover img {
+    transform: scale(1.1);
+  }
+  
+  .swiper-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .swiper-slide {
+      width: 80%;
+      margin-right: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .swiper-slide {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+
+
+
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: row;
+}
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  text-align: center;
+  background-color: red;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: red;
+  border: 1px solid #ccc;
+  width: 500px;
+  height: 500px;
+}
+
+.swiper-slide img {
+  max-width: 500px;
+  max-height: 500px;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.swiper-container {
+  width: 500px;
+  height: 300px;
+  text-align: left;
+
+}
+.swiper-slide {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  flex-direction: row;
+  width: 300px;
+  height: 200px;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.bb {
+  display: flex;
+  flex-direction: row;
+} 
+
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+}
+
+
+.bb img {
+  max-width: 400px;
+  max-height: 400px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+
+  
